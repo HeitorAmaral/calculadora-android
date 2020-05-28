@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="firstValue">1º valor:</string>
+    <string name="firstValueHint">1º valor do cálculo...</string>
+    <string name="secondValue">2º valor:</string>
+    <string name="secondValueHint">2º valor do cálculo...</string>
+    <string name="resultValue">Resultado:</string>
+    <string name="btnLimpar">Limpar</string>
+    <string name="btnResultado">Resultado</string>
+</resources>
