@@ -45,33 +45,30 @@
         android:id="@+id/btnVirgula"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
         android:onClick="getButtonValue"
         android:text="."
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/btnZero"
+        app:layout_constraintEnd_toEndOf="@+id/btnDois"
         app:layout_constraintTop_toTopOf="@+id/btnZero" />
 
     <Button
         android:id="@+id/btnTres"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
         android:onClick="getButtonValue"
         android:text="3"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/btnDois"
+        app:layout_constraintStart_toStartOf="@+id/btnSeis"
         app:layout_constraintTop_toTopOf="@+id/btnUm" />
 
     <Button
         android:id="@+id/btnDois"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
         android:onClick="getButtonValue"
         android:text="2"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/btnUm"
+        app:layout_constraintEnd_toEndOf="@+id/btnCinco"
         app:layout_constraintTop_toTopOf="@+id/btnUm" />
 
     <TextView
@@ -152,22 +149,20 @@
         android:id="@+id/btnCinco"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
         android:onClick="getButtonValue"
         android:text="5"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/btnQuatro"
+        app:layout_constraintEnd_toEndOf="@+id/btnOito"
         app:layout_constraintTop_toTopOf="@+id/btnQuatro" />
 
     <Button
         android:id="@+id/btnSeis"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
         android:onClick="getButtonValue"
         android:text="6"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/btnCinco"
+        app:layout_constraintStart_toStartOf="@+id/btnNove"
         app:layout_constraintTop_toTopOf="@+id/btnQuatro" />
 
     <Button
@@ -175,9 +170,11 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:onClick="getButtonValue"
         android:text="8"
         android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnNove"
         app:layout_constraintStart_toEndOf="@+id/btnSete"
         app:layout_constraintTop_toTopOf="@+id/btnSete" />
 
@@ -185,11 +182,11 @@
         android:id="@+id/btnNove"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:onClick="getButtonValue"
         android:text="9"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/btnOito"
+        app:layout_constraintEnd_toStartOf="@+id/btnDivisao"
         app:layout_constraintTop_toTopOf="@+id/btnSete" />
 
     <Button
@@ -260,6 +257,7 @@
         android:cursorVisible="false"
         android:editable="false"
         android:ems="10"
+        android:focusable="false"
         android:focusableInTouchMode="false"
         android:inputType="numberDecimal"
         app:layout_constraintBaseline_toBaselineOf="@id/txtViewResultado"

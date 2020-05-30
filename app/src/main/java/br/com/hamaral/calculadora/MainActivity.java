@@ -2,6 +2,7 @@ package br.com.hamaral.calculadora;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -38,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextVal2 = (EditText) findViewById(R.id.editTxtVal2);
 
 
-        if (editTextVal1.getText().toString().trim().isEmpty() || editTextVal2.getText().toString().trim().isEmpty()) {
+        if (editTextVal1.getText().toString().trim().isEmpty() || editTextVal2.getText().toString().trim().isEmpty())
+        {
             Toast.makeText(this, "É necessário preencher os todos campos de valor!", Toast.LENGTH_SHORT).show();
-        } else {
+        } else{
             Button button = (Button) findViewById(view.getId());
             String textButton = button.getText().toString();
 
@@ -94,5 +96,15 @@ public class MainActivity extends AppCompatActivity {
         editTextVal1.setText("");
         editTextVal2.setText("");
         editTextResultado.setText("");
+    }
+
+    /**
+     * Esconda o teclado
+     */
+    public void hideSoftKeyboard() {
+        if (getCurrentFocus() != null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
     }
 }
